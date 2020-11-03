@@ -17,7 +17,6 @@ public class NavigationHelper extends HelperBase {
         driver.findElement(By.cssSelector(".btn-outline-info:nth-child(3)")).click();
     }
     public void openItemsPage() {
-        driver.findElement(By.cssSelector(".btn-primary")).click();
         driver.findElement(By.cssSelector(".btn-outline-warning")).click();
     }
 

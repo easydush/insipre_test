@@ -34,4 +34,8 @@ public class ItemHelper extends HelperBase {
         driver.findElement(By.id("id_season")).click();
         driver.findElement(By.cssSelector(".btn-primary")).click();
     }
+    public Item getCreatedItem(){
+        String name = driver.findElement(By.cssSelector(".container:last-of-type")).findElement(By.tagName("h5")).getText();
+        return new Item(name, "", "");
+    }
 }

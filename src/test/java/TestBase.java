@@ -10,12 +10,6 @@ public class TestBase {
     ApplicationManager app;
     @Before
     public void setUp() {
-       app = new ApplicationManager();
+       app = ApplicationManager.getInstance();
     }
-    @After
-    public void tearDown() {
-        app.stop();
-    }
-
-
 }
