@@ -11,5 +11,6 @@ public class TestBase {
     @Before
     public void setUp() {
        app = ApplicationManager.getInstance();
+       app.navigation.openHomePage();
     }
 }

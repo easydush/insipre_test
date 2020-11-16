@@ -51,17 +51,13 @@ public class ApplicationManager {
         vars = new HashMap<String, Object>();
         baseUrl = "http://easybreezy.pythonanywhere.com/about/";
         navigation = new NavigationHelper(this);
-        AccountData user = new AccountData("test","Iamtesting!1" );
-        navigation.openHomePage();
         auth = new AuthHelper(this);
-        auth.login(user);
         item = new ItemHelper(this);
         work = new WorkHelper(this);
     }
     public static ApplicationManager getInstance(){
         if(app.get() == null){
             ApplicationManager newInstance = new ApplicationManager();
-            newInstance.navigation.openHomePage();
             app.set(newInstance);
         }
         return app.get();
